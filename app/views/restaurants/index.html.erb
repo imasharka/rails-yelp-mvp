@@ -1,0 +1,12 @@
+<h1 class="text-justify p-3">Restaurants</h1>
+<% @restaurants.each do |restaurant| %>
+  <div class="col-xs-12 col-sm-4">
+    <!-- link_to path do -->
+    <!-- end  -->
+    <%= link_to restaurant_path(restaurant) do %>
+      <h4><%= restaurant.name %></h4>
+      <h5><%= restaurant.category.capitalize %></h5>
+    <% end %>
+  </div>
+<% end %>
+<%= link_to "Add a New Restaurant", restaurants_new_path %>
